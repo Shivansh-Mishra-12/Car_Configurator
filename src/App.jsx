@@ -8,6 +8,7 @@ import Stand from './components/Stand'
 import CornerNav from './components/CornerNav'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import { Perf } from 'r3f-perf'
 
 const App = () => {
   const [CarScale, setCarScale] = useState(1)
@@ -120,6 +121,7 @@ const App = () => {
         camera={{ position: [2.5, 2, 3.8], rotation: [-0.5, 0.5, 0.3] }}
         className='z-10'
       >
+      <Perf position="top-left" />
         <spotLight position={[0.5, 2, 0]} color={0xFFFFFF} intensity={3} angle={Math.PI / 5} castShadow />
         <spotLight position={[-0.1, 2, 0]} color={0xFFFFFF} intensity={1} angle={Math.PI / 5} castShadow />
         <spotLight position={[0.2, 2, 0]} color={0xFFFFFF} intensity={1} angle={Math.PI / 5} castShadow />
