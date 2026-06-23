@@ -117,7 +117,7 @@ const App = () => {
     <section className='w-screen h-screen overflow-hidden'>
       {/* Canvas */}
       <Canvas
-        dpr={[1, 5]}
+        dpr={[1, 1.5]}
         camera={{ position: [2.5, 2, 3.8], rotation: [-0.5, 0.5, 0.3] }}
         className='z-10'
       >
