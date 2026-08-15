@@ -58,7 +58,7 @@ const App = () => {
   const [SelectedColor, setSelectedColor] = useState('#FF0000')
 
   const PartSelection = (n) => {
-    setSelectedPart(`Object_${n.toString()}`)
+    setSelectedPart(`mesh_${n.toString()}`)
   }
 
 
@@ -121,7 +121,7 @@ const App = () => {
         camera={{ position: [2.5, 2, 3.8], rotation: [-0.5, 0.5, 0.3] }}
         className='z-10'
       >
-      <Perf position="top-left" />
+      {/* <Perf position="top-left" /> */}
         <spotLight position={[0.5, 2, 0]} color={0xFFFFFF} intensity={3} angle={Math.PI / 5} castShadow />
         <spotLight position={[-0.1, 2, 0]} color={0xFFFFFF} intensity={1} angle={Math.PI / 5} castShadow />
         <spotLight position={[0.2, 2, 0]} color={0xFFFFFF} intensity={1} angle={Math.PI / 5} castShadow />
