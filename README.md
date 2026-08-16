@@ -1,11 +1,14 @@
 # 3D Car Configurator
 
-An interactive 3D car configuration experience built with
-React Three Fiber, Three.js and GSAP.
+<img width="720" height="364" alt="Screen Recording 2026-08-16 082433 (1)" src="https://github.com/user-attachments/assets/01055c7f-a8f2-4775-8e7b-170f771033f9" />
+
+<p> An interactive 3D car configuration experience built with
+React Three Fiber, Three.js and GSAP. </p>
 
 ## Live Demo
 
-https://3d-car-config.vercel.app/
+[Open the 3D Car Configurator](https://3d-car-config.vercel.app/)
+
 
 ## Features
 
