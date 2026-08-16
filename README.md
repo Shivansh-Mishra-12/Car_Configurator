@@ -3,7 +3,8 @@
 <img width="720" height="364" alt="Screen Recording 2026-08-16 082433 (1)" src="https://github.com/user-attachments/assets/01055c7f-a8f2-4775-8e7b-170f771033f9" />
 
 <p> An interactive 3D car configuration experience built with
-React Three Fiber, Three.js and GSAP. </p>
+React Three Fiber, Three.js and GSAP. <br/> <br/>
+This project demonstrates how interactive 3D product experiences can be used to let users explore and customize products directly in the browser.</p>
 
 ## Live Demo
 
@@ -42,13 +43,23 @@ React Three Fiber, Three.js and GSAP. </p>
 </table>
 
 ## What I Built
-An interactive 3D Car showcase where the user can customize the color of custom parts of the car. It is a 3D Product showcase experience allowing users the explore a bit more and make better choices according to their needs.
+Built an interactive 3D product configurator that allows users to customize different vehicle components and preview their selections in real time.
+
+I handled the 3D scene, model integration, material/color customization, camera interaction, UI controls and animations.
 
 ## Challenges
 
-1. Choosing the right customizable 3d model wihtout compromising with the graphics took a great time and effort.
-2. The optimization process was really hard as it was very difficult to boost the overall performance of the web experience while taking care of the quality of the 3d model. To do so I reduced total count of triangles in the 3d model to some extent using blender.
-3. Making this whole thing responsive and low-end device compatible just held my breathe, and still it doesn't perform too good in low-end devices.
+- <h4>3D Asset Optimization</h4>
+
+    Optimized the 3D assets to reduce file size and improve loading performance while maintaining visual quality.
+
+- <h4>Performance</h4>
+
+    Reduced rendering overhead and optimized the experience for smoother interaction, particularly on lower-powered devices.
+
+- <h4>Responsive 3D Experience</h4>
+
+    Adapted the layout and 3D presentation for different screen sizes while maintaining usability.
 
 ## Future Improvements
 
