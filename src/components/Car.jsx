@@ -3,8 +3,7 @@ import { useGLTF } from '@react-three/drei'
 import { compressNormals } from 'three/examples/jsm/utils/GeometryCompressionUtils.js';
 
 const Car = ({ Scale, SelectedPart , SelectedColor}) => {
-  const { nodes, materials } = useGLTF('../supercar.glb')
-    console.log(SelectedPart)
+  const { nodes, materials } = useGLTF('../car.glb')
     useEffect(()=>{
       if(!nodes[SelectedPart]) return
       nodes[SelectedPart].material.color.set(SelectedColor)
@@ -12,283 +11,335 @@ const Car = ({ Scale, SelectedPart , SelectedColor}) => {
 
 
   return (
-    <group scale={Scale} dispose={null}>
-
-      <group name="Sketchfab_Scene">
-        <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
-          <group
-            name="7322e9139a4848d8bd844a5d13e02302fbx"
-            rotation={[Math.PI / 2, 0, 0]}
-            scale={0.01}>
-            <group name="RootNode">
-              <group name="Object_3">
-                <primitive object={nodes._rootJoint} />
-                <skinnedMesh
-                  name="Object_5"
-                  geometry={nodes.Object_5.geometry}
-                  material={materials.BODY}
-                  skeleton={nodes.Object_5.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_6"
-                  geometry={nodes.Object_6.geometry}
-                  material={materials.BODY}
-                  skeleton={nodes.Object_6.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_7"
-                  geometry={nodes.Object_7.geometry}
-                  material={materials.GBLACK}
-                  skeleton={nodes.Object_7.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_8"
-                  geometry={nodes.Object_8.geometry}
-                  material={materials.CHROME02}
-                  skeleton={nodes.Object_8.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_9"
-                  geometry={nodes.Object_9.geometry}
-                  material={materials.CHROME03}
-                  skeleton={nodes.Object_9.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_10"
-                  geometry={nodes.Object_10.geometry}
-                  material={materials.ENGBLUE}
-                  skeleton={nodes.Object_10.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_11"
-                  geometry={nodes.Object_11.geometry}
-                  material={materials.GLASS}
-                  skeleton={nodes.Object_11.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_12"
-                  geometry={nodes.Object_12.geometry}
-                  material={materials.BAFFLE}
-                  skeleton={nodes.Object_12.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_13"
-                  geometry={nodes.Object_13.geometry}
-                  material={materials.SCREEN}
-                  skeleton={nodes.Object_13.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_14"
-                  geometry={nodes.Object_14.geometry}
-                  material={materials.GREY}
-                  skeleton={nodes.Object_14.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_15"
-                  geometry={nodes.Object_15.geometry}
-                  material={materials.CFIBER}
-                  skeleton={nodes.Object_15.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_16"
-                  geometry={nodes.Object_16.geometry}
-                  material={materials.HLAMP}
-                  skeleton={nodes.Object_16.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_17"
-                  geometry={nodes.Object_17.geometry}
-                  material={materials.MIRROR}
-                  skeleton={nodes.Object_17.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_18"
-                  geometry={nodes.Object_18.geometry}
-                  material={materials.CHROME}
-                  skeleton={nodes.Object_18.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_19"
-                  geometry={nodes.Object_19.geometry}
-                  material={materials.TSIGNAL}
-                  skeleton={nodes.Object_19.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_20"
-                  geometry={nodes.Object_20.geometry}
-                  material={materials.TLAMP01}
-                  skeleton={nodes.Object_20.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_21"
-                  geometry={nodes.Object_21.geometry}
-                  material={materials.TLAMP02}
-                  skeleton={nodes.Object_21.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_22"
-                  geometry={nodes.Object_22.geometry}
-                  material={materials.MBLACK}
-                  skeleton={nodes.Object_22.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_23"
-                  geometry={nodes.Object_23.geometry}
-                  material={materials.INT01}
-                  skeleton={nodes.Object_23.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_24"
-                  geometry={nodes.Object_24.geometry}
-                  material={materials.BLAMP}
-                  skeleton={nodes.Object_24.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_25"
-                  geometry={nodes.Object_25.geometry}
-                  material={materials.CARPET}
-                  skeleton={nodes.Object_25.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_26"
-                  geometry={nodes.Object_26.geometry}
-                  material={materials.CALIPERS}
-                  skeleton={nodes.Object_26.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_27"
-                  geometry={nodes.Object_27.geometry}
-                  material={materials.ROTOR}
-                  skeleton={nodes.Object_27.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_28"
-                  geometry={nodes.Object_28.geometry}
-                  material={materials.GOLD}
-                  skeleton={nodes.Object_28.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_29"
-                  geometry={nodes.Object_29.geometry}
-                  material={materials.TIRE}
-                  skeleton={nodes.Object_29.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_30"
-                  geometry={nodes.Object_30.geometry}
-                  material={materials.RIMS}
-                  skeleton={nodes.Object_30.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_31"
-                  geometry={nodes.Object_31.geometry}
-                  material={materials.INT02}
-                  skeleton={nodes.Object_31.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_32"
-                  geometry={nodes.Object_32.geometry}
-                  material={materials.EBLEM}
-                  skeleton={nodes.Object_32.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_33"
-                  geometry={nodes.Object_33.geometry}
-                  material={materials.PIPES}
-                  skeleton={nodes.Object_33.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_34"
-                  geometry={nodes.Object_34.geometry}
-                  material={materials.material}
-                  skeleton={nodes.Object_34.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_35"
-                  geometry={nodes.Object_35.geometry}
-                  material={materials.RUBBER}
-                  skeleton={nodes.Object_35.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_36"
-                  geometry={nodes.Object_36.geometry}
-                  material={materials.GAUGE02}
-                  skeleton={nodes.Object_36.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_37"
-                  geometry={nodes.Object_37.geometry}
-                  material={materials.GAUGE01}
-                  skeleton={nodes.Object_37.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_38"
-                  geometry={nodes.Object_38.geometry}
-                  material={materials.GAUGE03}
-                  skeleton={nodes.Object_38.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_39"
-                  geometry={nodes.Object_39.geometry}
-                  material={materials.STWHEEL1}
-                  skeleton={nodes.Object_39.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_40"
-                  geometry={nodes.Object_40.geometry}
-                  material={materials.STEREO2}
-                  skeleton={nodes.Object_40.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_41"
-                  geometry={nodes.Object_41.geometry}
-                  material={materials.BLACK}
-                  skeleton={nodes.Object_41.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_42"
-                  geometry={nodes.Object_42.geometry}
-                  material={materials.STWHEEL2}
-                  skeleton={nodes.Object_42.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_43"
-                  geometry={nodes.Object_43.geometry}
-                  material={materials.STWHEEL3}
-                  skeleton={nodes.Object_43.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_44"
-                  geometry={nodes.Object_44.geometry}
-                  material={materials.SHIFTER}
-                  skeleton={nodes.Object_44.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_45"
-                  geometry={nodes.Object_45.geometry}
-                  material={materials.LPLATE}
-                  skeleton={nodes.Object_45.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_46"
-                  geometry={nodes.Object_46.geometry}
-                  material={materials.LPHOLDER}
-                  skeleton={nodes.Object_46.skeleton}
-                />
-                <skinnedMesh
-                  name="Object_47"
-                  geometry={nodes.Object_47.geometry}
-                  material={materials.ENGSTL}
-                  skeleton={nodes.Object_47.skeleton}
-                />
-              </group>
-            </group>
+      <group scale={Scale} dispose={null}>
+      <group scale={0.01}>
+        <group position={[77.776, 32.891, -127.364]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+          <group position={[0.027, -0.164, -0.008]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.bone_caliper_BL_details_Material015_0.geometry}
+              material={materials['Material.015']}
+              position={[0.029, 0.004, 0.002]}
+            />
           </group>
+          <group position={[0.002, 0, 0]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.WheelBL_rims_Material015_0.geometry}
+              material={materials['Material.015']}
+              position={[0.014, 0, 0]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.WheelBL_tyres_Material005_0.geometry}
+              material={materials['Material.005']}
+              position={[0.014, 0, 0]}
+            />
+          </group>
+        </group>
+        <group position={[-77.8, 32.891, -127.364]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+          <group position={[-0.026, -0.164, -0.008]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.bone_caliper_BR_details_Material015_0.geometry}
+              material={materials['Material.015']}
+              position={[-0.031, 0.002, 0.002]}
+            />
+          </group>
+          <group position={[0.002, 0, 0]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.WheelBR_rims_Material015_0.geometry}
+              material={materials['Material.015']}
+              position={[-0.014, 0, 0]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.WheelBR_tyres_Material005_0.geometry}
+              material={materials['Material.005']}
+              position={[-0.014, 0, 0]}
+            />
+          </group>
+        </group>
+        <group position={[80.452, 30.968, 127.26]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+          <group position={[0.028, 0.156, -0.017]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.bone_caliper_FL_details_Material015_0.geometry}
+              material={materials['Material.015']}
+              position={[0.03, 0.004, 0]}
+            />
+          </group>
+          <group position={[0.002, 0, 0]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.WheelFL_rims_Material015_0.geometry}
+              material={materials['Material.015']}
+              position={[0.014, 0, 0]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.WheelFL_tyres_Material005_0.geometry}
+              material={materials['Material.005']}
+              position={[0.014, 0, 0]}
+            />
+          </group>
+        </group>
+        <group position={[-79.832, 30.968, 127.26]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+          <group position={[-0.034, 0.156, -0.017]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.bone_caliper_FR_details_Material015_0.geometry}
+              material={materials['Material.015']}
+              position={[-0.028, -0.003, -0.01]}
+            />
+          </group>
+          <group position={[0.002, 0, 0]}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.WheelFR_rims_Material015_0.geometry}
+              material={materials['Material.015']}
+              position={[-0.014, 0, 0]}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.WheelFR_tyres_Material005_0.geometry}
+              material={materials['Material.005']}
+              position={[-0.014, 0, 0]}
+            />
+          </group>
+        </group>
+        <group position={[0, 0, 10.908]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.chassis_Carpaint_3_Material011_0.geometry}
+            material={materials['Material.011']}
+            position={[0, -0.019, 0.62]}
+            scale={4.431}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.chassis_Carpaint_4_Material010_0.geometry}
+            material={materials['Material.010']}
+            position={[0, -0.019, 0.62]}
+            scale={4.431}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.chassis_Carpaint_5_Material009_0.geometry}
+            material={materials['Material.009']}
+            position={[0, -0.019, 0.62]}
+            scale={4.431}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.chassis_Inscriptions_Material018_0.geometry}
+            material={materials['Material.018']}
+            position={[0, -0.019, 0.62]}
+            scale={4.431}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.chassis_carbon_fiber_Material013_0.geometry}
+            material={materials['Material.013']}
+            position={[0, -0.019, 0.62]}
+            scale={4.431}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.chassis_carpaint_Material001_0.geometry}
+            material={materials['Material.001']}
+            position={[0, -0.019, 0.62]}
+            scale={4.431}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.chassis_carpaint_2_Material012_0.geometry}
+            material={materials['Material.012']}
+            position={[0, -0.019, 0.62]}
+            scale={4.431}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.chassis_decales_Material014_0.geometry}
+            material={materials['Material.014']}
+            position={[0, -0.019, 0.62]}
+            scale={4.431}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.chassis_details_Material015_0.geometry}
+            material={materials['Material.015']}
+            position={[0, -0.019, 0.62]}
+            scale={4.431}
+          />
+        </group>
+        <group position={[0.151, 0, 10.908]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.detach_door_L_50_Carpaint_3_Material011_0.geometry}
+            material={materials['Material.011']}
+            position={[0.842, -0.104, 0.487]}
+            scale={1.33}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.detach_door_L_50_Inscriptions_Material018_0.geometry}
+            material={materials['Material.018']}
+            position={[0.842, -0.104, 0.487]}
+            scale={1.33}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.detach_door_L_50_carpaint_Material001_0.geometry}
+            material={materials['Material.001']}
+            position={[0.842, -0.104, 0.487]}
+            scale={1.33}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.detach_door_L_50_decales_Material001_0.geometry}
+            material={materials['Material.001']}
+            position={[0.842, -0.104, 0.487]}
+            scale={1.33}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.detach_door_L_50_details_Material015_0.geometry}
+            material={materials['Material.015']}
+            position={[0.842, -0.104, 0.487]}
+            scale={1.33}
+          />
+        </group>
+        <group position={[0.151, 0, 10.908]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.detach_door_R_50_Carpaint_3_Material011_0.geometry}
+            material={materials['Material.011']}
+            position={[-0.842, -0.104, 0.487]}
+            scale={1.33}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.detach_door_R_50_Inscriptions_Material018_0.geometry}
+            material={materials['Material.018']}
+            position={[-0.842, -0.104, 0.487]}
+            scale={1.33}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.detach_door_R_50_carpaint_Material001_0.geometry}
+            material={materials['Material.001']}
+            position={[-0.842, -0.104, 0.487]}
+            scale={1.33}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.detach_door_R_50_decales_Material001_0.geometry}
+            material={materials['Material.001']}
+            position={[-0.842, -0.104, 0.487]}
+            scale={1.33}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.detach_door_R_50_details_Material015_0.geometry}
+            material={materials['Material.015']}
+            position={[-0.842, -0.104, 0.487]}
+            scale={1.33}
+          />
+        </group>
+        <group position={[0.006, 73.297, 6.357]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.glasses_glass_light__0.geometry}
+            material={materials.glasses_glass_light__0}
+            position={[0, 0, -0.014]}
+            scale={3.999}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.glasses_glass_windows__0.geometry}
+            material={materials.glasses_glass_light__0}
+            position={[0, 0, -0.014]}
+            scale={3.999}
+          />
+        </group>
+        <group position={[0.151, 0, 10.908]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.lights_brakes_glows_Material017_0.geometry}
+            material={materials['Material.017']}
+            position={[0, 1.921, 0.711]}
+            scale={1.588}
+          />
+        </group>
+        <group position={[0.151, 0, 10.908]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.lights_position_back_glows_Material017_0.geometry}
+            material={materials['Material.017']}
+            position={[0, 1.897, 0.702]}
+            scale={1.543}
+          />
+        </group>
+        <group position={[0.151, 0, 10.908]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.lights_position_front_and_back_glows_Material017_0.geometry}
+            material={materials['Material.017']}
+            position={[0, -0.846, 0.557]}
+            scale={5.66}
+          />
+        </group>
+        <group position={[0.151, 0, 10.908]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.lights_reverse_glows_Material017_0.geometry}
+            material={materials['Material.017']}
+            position={[0.032, 0.911, 0.506]}
+          />
         </group>
       </group>
     </group>
   )
 }
 
-useGLTF.preload('../supercar.glb')
+useGLTF.preload('../car.glb')
 export default Car

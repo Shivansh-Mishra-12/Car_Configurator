@@ -45,11 +45,11 @@ const App = () => {
 
   // DATA
   const changebles = [
-    { id: 1, name: 'Body', obj: 5 },
-    { id: 2, name: 'Doors', obj: 6 },
-    { id: 3, name: 'GlassHouse', obj: 11 },
-    { id: 4, name: 'Alloys', obj: 30 },
-    { id: 5, name: 'Ext. Parts', obj: 17 },
+    { id: 1, name: 'Body', obj: "chassis_carpaint_Material001_0" },
+    { id: 2, name: 'Front Light', obj: "lights_position_front_and_back_glows_Material017_0" },
+    { id: 3, name: 'GlassHouse', obj: "glasses_glass_windows__0" },
+    { id: 4, name: 'Alloys', obj: "WheelFL_rims_Material015_0" },
+    { id: 5, name: 'Ext. Parts', obj: "chassis_carbon_fiber_Material013_0" },
   ]
 
 
@@ -59,7 +59,8 @@ const App = () => {
   const [SelectedColor, setSelectedColor] = useState('#FF0000')
 
   const PartSelection = (n) => {
-    setSelectedPart(`Object_${n.toString()}`)
+    // setSelectedPart(`Object_${n.toString()}`)
+    setSelectedPart(n)
   }
 
 
@@ -123,12 +124,12 @@ const App = () => {
         className='z-10'
       >
       {/* <Perf position="top-left" /> */}
-        <spotLight position={[0.5, 2, 0]} color={0xFFFFFF} intensity={3} angle={Math.PI / 5} castShadow />
+        {/* <spotLight position={[0.5, 2, 0]} color={0xFFFFFF} intensity={3} angle={Math.PI / 5} castShadow />
         <spotLight position={[-0.1, 2, 0]} color={0xFFFFFF} intensity={1} angle={Math.PI / 5} castShadow />
         <spotLight position={[0.2, 2, 0]} color={0xFFFFFF} intensity={1} angle={Math.PI / 5} castShadow />
         <spotLight position={[-0.2, 2, 0]} color={0xFFFFFF} intensity={1} angle={Math.PI / 5} castShadow />
         <spotLight position={[0.3, 2, 0]} color={0xFFFFFF} intensity={1} angle={Math.PI / 5} castShadow />
-        <spotLight position={[-0.3, 2, 0]} color={0xFFFFFF} intensity={1} angle={Math.PI / 5} castShadow />
+        <spotLight position={[-0.3, 2, 0]} color={0xFFFFFF} intensity={1} angle={Math.PI / 5} castShadow /> */}
 
         <group>
           <Car Scale={CarScale} SelectedPart={SelectedPart} SelectedColor={SelectedColor} />
@@ -155,7 +156,7 @@ const App = () => {
               <button
                 key={part.id}
                 onClick={() => PartSelection(part.obj)}
-                className='hover:bg-[#222] active:bg-[#222] transition-all duration-150 text-white w-fit h-fit py-2 px-7 rounded-lg border border-[#222]'
+                className='active:transition-all active:scale-[1.1] cursor-pointer hover:bg-[#222] active:bg-[#222] transition-all duration-150 text-white w-fit h-fit py-2 px-7 rounded-lg border border-[#222]'
               >
                 {part.name}
               </button>
