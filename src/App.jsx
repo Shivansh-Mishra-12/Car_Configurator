@@ -9,6 +9,7 @@ import CornerNav from './components/CornerNav'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { Perf } from 'r3f-perf'
+import Loader from './components/Loader'
 
 const App = () => {
   const [CarScale, setCarScale] = useState(1)
@@ -116,6 +117,7 @@ const App = () => {
   return (
     <section className='w-screen h-screen overflow-hidden'>
       {/* Canvas */}
+      <Loader />
       <Canvas
         dpr={[1, 5]}
         camera={{ position: [2.5, 2, 3.8], rotation: [-0.5, 0.5, 0.3] }}
