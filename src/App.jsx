@@ -59,7 +59,7 @@ const App = () => {
   const [SelectedColor, setSelectedColor] = useState('#FF0000')
 
   const PartSelection = (n) => {
-    setSelectedPart(`mesh_${n.toString()}`)
+    setSelectedPart(`Object_${n.toString()}`)
   }
 
 
@@ -116,7 +116,6 @@ const App = () => {
 
   return (
     <section className='w-screen h-screen overflow-hidden'>
-      {/* Canvas */}
       <Loader />
       <Canvas
         dpr={[1, 5]}
